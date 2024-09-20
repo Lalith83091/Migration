@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '18.19.1' # or any other version you prefer
       - name: Install Http-server
-        run: npm install -g http-server && export PATH"$PATH:~/.npm/bin"
+        run: npm install -g http-server
       - name: moving to path
         run: cd dist/migration-process/browser
       - name: Build the application
