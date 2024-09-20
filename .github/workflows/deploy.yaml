@@ -1,0 +1,32 @@
+name: Angular App Migration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x' # or any other version you prefer
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the application
+        run: ng build --prod --base-href=/Migration/
+
+      - name: Deploy to GitHub Pages
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@latest
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: production
+          base_href: /Migration/
+          deploy_branch: gh-pages
+          angular_dist_build_folder: dist/your-angular-app
+          permissions: contents: write
