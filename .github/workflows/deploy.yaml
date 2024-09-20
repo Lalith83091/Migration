@@ -14,11 +14,9 @@ jobs:
         uses: actions/setup-node@v3.7.0
         with:
           node-version: '18.19.1' # or any other version you prefer
-      - name: Install Angular
-        run: npm install @angular/cli@17
-
-      - name: Install dependencies
-        run: npm install
-
+      - name: Install Http-server
+        run: npm install http-server
+      - name: moving to path
+        run: cd dist/migration-process/browser
       - name: Build the application
-        run: ng serve
+        run: http-server
