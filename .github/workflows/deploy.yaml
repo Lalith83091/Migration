@@ -3,7 +3,7 @@ name: Angular App Migration
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
