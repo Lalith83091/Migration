@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x' # or any other version you prefer
+          node-version: '18.13.0' # or any other version you prefer
 
       - name: Install dependencies
         run: npm install
