@@ -30,4 +30,4 @@ jobs:
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/
           repository_name: Lalith83091/Migration 
-          permissions: contents: write
+          # permissions: contents: write
