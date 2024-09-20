@@ -28,5 +28,6 @@ jobs:
           build_configuration: production
           base_href: /Migration/
           deploy_branch: gh-pages
-          angular_dist_build_folder: dist/your-angular-app
+          angular_dist_build_folder: dist/
+          repository_name: Lalith83091/Migration 
           permissions: contents: write
